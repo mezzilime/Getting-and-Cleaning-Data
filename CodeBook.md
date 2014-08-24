@@ -1,4 +1,4 @@
-"CodeBook.md"
+CodeBook.md
 =================
 
 This CodeBook outlines data and variable transformations used in run_analysis.R
@@ -19,18 +19,35 @@ The following files are read by the script:
 Data in folders "Inertial Signal" is not read.
 
 ### Renaming and cleaning
-For activity label, the numerical data is replaced with the activity label in the following manner: "1" becomes "WALKING", "2" becomes "WALKING_UPSTAIRS", "3" becomes "WALKING_DOWNSTAIRS", "4" becomes "SITTING", "5" becomes "STANDING", and "6" becomes "LAYING".
+For activity label, the numerical data is replaced with the activity label in the following manner:
 
-Numbers and leading zereos are removed. Punctuation is removed. Abbreviations are expanded: "t" becomes "Time", "f" becomes "Fourier", "Acc" becomes "Acceleration", "Mag" becomes "Magnitude", "mean" becomes "Mean", and "std" becomes "Std".
+    "1" becomes "WALKING",
+    "2" becomes "WALKING_UPSTAIRS",
+    "3" becomes "WALKING_DOWNSTAIRS",
+    "4" becomes "SITTING",
+    "5" becomes "STANDING", and
+    "6" becomes "LAYING".
+
+Numbers and leading zereos are removed. Punctuation is removed.
+
+Abbreviations are expanded:
+
+    "t" becomes "Time",
+    "f" becomes "Fourier",
+    "Acc" becomes "Acceleration",
+    "Mag" becomes "Magnitude",
+    "mean" becomes "Mean", and
+    "std" becomes "Std".
  
 ### Final tidy dataset
 The final dataset is a narrow tidy dataset. See the Tidy Data document for reference:
 http://vita.had.co.nz/papers/tidy-data.pdf
 
 Four final columns are created for the final text file with the following labels:
-1. "subject" -- the user subject number.
-2. "activity" -- the activity engaged in (walking, sitting, etc.)
-3. "variable" -- the sensor measurement variable.
-4. "mean" -- the mean of the variable.
+
+    1. "subject" -- the user subject number.
+    2. "activity" -- the activity engaged in (walking, sitting, etc).
+    3. "variable" -- the sensor measurement variable.
+    4. "mean" -- the mean of the variable.
 
 The final tidy.txt file will have 14220 observations in narrow format.
