@@ -18,7 +18,7 @@ A full description of the raw data is available at:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 ### Objective
-The objective of run_analysis.R is to pull data for the UCI dataset, merge test and trial datasets, modify variable names, and create a tidy dataset.
+The objective of run_analysis.R is to pull data from the UCI dataset, merge test and trial datasets, modify variable names, and create a tidy dataset.
 
 ### Dependencies
 The script will load libraries required including data.table, dplyr, and reshape2. The working directory must include the unzipped UCI dataset.
