@@ -28,7 +28,7 @@ For activity label, the numerical data is replaced with the activity label in th
     "5" becomes "STANDING", and
     "6" becomes "LAYING".
 
-Numbers and leading zereos are removed. Punctuation is removed.
+Numbers and leading zereos are removed. Punctuation is removed. This is done to eliminate potential reading errors for further calculations.
 
 Abbreviations are expanded:
 
@@ -38,6 +38,8 @@ Abbreviations are expanded:
     "Mag" becomes "Magnitude",
     "mean" becomes "Mean", and
     "std" becomes "Std".
+
+For example, the original variable "1 tBodyAcc-mean()-X" will be modified to "TimeBodyAccelerationMeanX".
  
 ### Final tidy dataset
 The final dataset is a narrow tidy dataset. See the Tidy Data document for reference:
@@ -51,3 +53,13 @@ Four final columns are created for the final text file with the following labels
     4. "mean" -- the mean of the variable.
 
 The final tidy.txt file will have 14220 observations in narrow format.
+
+The first few lines of the tidy.txt file should look like this:
+
+    "subject" "activity" "variable" "mean"
+    "1" "LAYING" "TimeBodyAccelerationMeanX" 0.22159824394
+    "1" "LAYING" "TimeBodyAccelerationMeanY" -0.0405139534294
+    "1" "LAYING" "TimeBodyAccelerationMeanZ" -0.11320355358
+    "1" "LAYING" "TimeGravityAccelerationMeanX" -0.24888179828
+
+
